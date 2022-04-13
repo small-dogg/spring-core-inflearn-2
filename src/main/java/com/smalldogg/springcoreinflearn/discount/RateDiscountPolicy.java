@@ -1,8 +1,14 @@
 package com.smalldogg.springcoreinflearn.discount;
 
+import com.smalldogg.springcoreinflearn.annotation.MainDiscountPolicy;
 import com.smalldogg.springcoreinflearn.member.Grade;
 import com.smalldogg.springcoreinflearn.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
 
+@Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 
   private int discountPercent = 10;

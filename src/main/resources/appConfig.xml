@@ -11,6 +11,6 @@
   <bean id="discountPolicy" class="com.smalldogg.springcoreinflearn.discount.RateDiscountPolicy"/>
   <bean id="orderService" class="com.smalldogg.springcoreinflearn.order.OrderServiceImpl">
     <constructor-arg name="memberRepository" ref="memberRepository"/>
-    <constructor-arg name="discountPolicy" ref="discountPolicy"/>
+    <constructor-arg name="fixDiscountPolicy" ref="discountPolicy"/>
   </bean>
 </beans>
